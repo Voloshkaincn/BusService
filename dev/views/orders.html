@@ -1,0 +1,71 @@
+<div class="content col-12" ng-controller="orderCtrl">
+	<form class="panel-period"  ng-controller="periodCtrl">
+	<input class="input-date input-lg" type="text" id='periodFrom' placeholder="От">
+	<input class="input-date input-lg" type="text" id='periodTo' placeholder="До">
+	<button class="priod-btn period-all">Все</button>
+	<div class="priod-btn__group">
+		<button class="priod-btn active">Сегодня</button>
+		<button class="priod-btn">Вчера</button>
+		<button class="priod-btn">7 дней</button>
+		<button class="priod-btn">30дней</button>
+		<button class="priod-btn">90дней</button>				
+	</div>
+</form>
+
+	<div class="panel-options block">
+	<div class="panel-options__buttons">
+		<div class="btn-group">
+			<button class="btn-little btn-add" ng-click="add()"></button>
+			<button class="btn-little btn-del" ng-click="del()"></button>
+		</div>
+		<div class="btn-group">
+			<button class="btn" ng-click="archive()">Архив</button>
+		</div>
+	</div>
+	<input id="search" class="input-search input-style input-md" type="text" placeholder="Поиск по таблице ...">
+	<label class="input-icon icon-search" for="search"></label>
+</div>
+	<div class="table-orders table-block">
+	<table>
+		<thead>
+			<tr>
+				<th><input type="checkbox"  ng-model="toggleCheck" ng-change="allCheck()"></th>
+				<th>ID</th>
+				<th>Клиент</th>
+				<th>Модель</th>
+				<th>Гос номер</th>
+				<th>Пост</th>
+				<th>Сумма</th>
+				<th>Долг</th>
+				<th>Время</th>
+				<th>Автор</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="check-{{data.check[$index]}}" 
+			ng-repeat = "order in orders">
+				<td><input type="checkbox" ng-model="order.check"></td>
+				<td>{{ order.id }}</td>
+				<td>{{ order.client }}</td>
+				<td>{{ order.model }}</td>
+				<td>{{ order.number }}</td>
+				<td class="text-nowrap">{{ order.post }}</td>
+				<td class="text-nowrap">{{ order.summ }}</td>
+				<td class="text-nowrap warning-color">{{ order.debt }}</td>
+				<td>{{ order.time }}</td>
+				<td>{{ order.author }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	<div class="pagination">
+	<ul class="pagination__items">
+		<li class="pagination__item pagination__prev"><a href="#"></a></li>
+		<li class="pagination__item pagination__number"><a href="#">1</a></li>
+		<li class="pagination__item pagination__number active"><a href="#">2</a></li>
+		<li class="pagination__item pagination__number"><a href="#">3</a></li>
+		<li class="pagination__item pagination__number"><a href="#">4</a></li>
+		<li class="pagination__item pagination__next"><a href="#"></a></li>	
+	</ul>
+</div>
+</div>

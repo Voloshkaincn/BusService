@@ -1,0 +1,12 @@
+.notes {
+	width: 56%;
+	display: flex;
+	&__item {
+		width: 50%;
+	}
+	&__title {
+		font-weight: bold;
+		margin-left: 0.714em;
+		margin-bottom: 0.4em;
+	}
+}

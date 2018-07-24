@@ -1,0 +1,155 @@
+<div class="content col-12" ng-controller="orderDetailCtrl">
+	<div class="order-detail">
+	<div class="options-row">
+		<a href="#!orders" class="btn"><span class="icon-ic_back_circle"></span>Все заказы</a>
+	</div>
+	<form class="block order-detail__form">
+		<div class="form-row">
+			<div class="form-group">
+				<label for="order-number">Заказ-наряд №</label>
+				<input class="input-style input-sm" id="order-number" type="text" value="7" disabled="disabled">
+			</div>
+			<div class="form-group">
+				<label for="order-date-from">от</label>
+				<input class="input-style input-sm" id="orderDateFrom" type="text">
+				<label class="input-date__icon" for="orderDateFrom"></label>
+			</div>
+			<div class="form-group">
+				<label for="order-type-price">Тип цен</label>
+				<select class="select-style input-sm" id="order-type-price" type="text">
+					<option value="">Розничная</option>
+					<option value="">Оптавая</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="order-currency">Валюта</label>
+				<select class="select-style input-sm" id="order-currency" type="text">
+					<option value="">грн</option>
+					<option value="">$</option>
+					<option value="">€</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group">
+				<label for="order-client">Клиент</label>
+				<select class="select-style input-sm" id="order-client" type="text">
+					<option value="">Инокентий Ульянович Длиннофамильный</option>
+					<option value="">Сашка Сашкович Фамильный</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="order-post">Пост</label>
+				<select class="select-style input-sm" id="order-post" type="text">
+					<option value="">Пост 1</option>
+					<option value="">Пост 2</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group">
+				<label for="order-trade-type">Вид торг.</label>
+				<select class="select-style input-sm" id="order-trade-type" type="text">
+					<option value="">Товартый кредит</option>
+					<option value="">Наличний расчет</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="order-car">Атомобить</label>
+				<select class="select-style input-sm" id="order-car" type="text">
+					<option value="">VW Crafter, держ№СВ435435</option>
+					<option value="">VW Crafter, держ№СВ435435</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="order-mileage">Пробег</label>
+				<input class="input-style input-sm" id="order-mileage" type="text">
+				<span>км</span>
+			</div>
+		</div>
+	</form>
+</div>
+	<div class="panel-options block justify-content-start flex-wrap">
+	<div class="panel-options__buttons">
+		<div class="btn-group">
+			<button class="btn-little btn-print" ng-click="print()"></button>
+			<button class="btn-little btn-del" ng-click="del()"></button>
+		</div>
+		<div class="btn-group">
+			<a href="#!spares" class="btn mr-2">Подбор</a>
+			<a href="#!spares" class="btn">Подбор услуг</a>
+		</div>
+	</div>
+	<div class="form-row">
+		<div class="form-group">
+		<label for="order-date-from">от</label>
+		<input class="order-options-date input-style input-sm" id="order-options-date-from" type="text">
+		<label class="input-date__icon" for="order-date-from"></label>
+	</div>
+	<div class="form-group">
+		<label for="order-date-to">до</label>
+		<input class="order-options-date input-style input-sm" id="order-options-date-to" type="text">
+		<label class="input-date__icon" for="order-date-from"></label>
+	</div>
+	</div>
+	
+</div>
+	<div class="table-order-detail table-block">
+	<table>
+		<thead>
+			<tr>
+				<th><input type="checkbox" ng-model="toggleCheck" ng-change="allCheck()"></th>
+				<th>ID</th>
+				<th>Вид</th>
+				<th>Товар</th>
+				<th>Артикул</th>
+				<th>Бренд</th>
+				<th>Кол-во</th>
+				<th>Цена</th>
+				<th>Сумма</th>
+				<th>Касса</th>
+				<th>Пост</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr  class="check-{{order.check}}" ng-repeat="orderDetail in orderDetails">
+				<td><input type="checkbox" ng-model="orderDetail.check"></td>
+				<td>{{ orderDetail.id }}</td>
+				<td>{{ orderDetail.kind }}</td>
+				<td>{{ orderDetail.goods }}</td>
+				<td>{{ orderDetail.article }}</td>
+				<td>{{ orderDetail.brand }}</td>
+				<td>{{ orderDetail.count }}</td>
+				<td class="text-nowrap">{{ orderDetail.price }}</td>
+				<td class="text-nowrap">{{ orderDetail.summ }}</td>
+				<td>{{ orderDetail.cashbox }}</td>
+				<td class="text-nowrap">{{ orderDetail.post }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	<div class="row col-12 no-gutters p-0">
+			<div class="notes col-sm-7 col-12">
+	<div class="col-6 pl-0 notes__item">
+		<div class="notes__title">Примечания</div>
+		<textarea class="w-100 input-style" name="" id="" rows="7"></textarea>
+	</div>
+	<div class="col-6 pr-0 pl-md-2 pl-0 notes__item">
+		<div class="notes__title">Рекомендации</div>
+		<textarea class="w-100 input-style" name="" id="" rows="7">Уважаемый владелец автомобиля, мы рекомендуем:
+		</textarea>
+		
+	</div>
+	
+</div>
+			<div class="col-sm-5 col-12 order-result">
+	<div class="result__items">
+		<div class="result__item primary-text">Итого услуги: 29,000 грн</div>
+		<div class="result__item secondary-text">Итого товар: 29,000 грн</div>
+		<div class="result__item bright-text">Всего: 29,000 грн</div>
+	</div>
+	<button class="btn">Провести</button>
+	<button class="btn">Закрыть</button>
+</div>
+	</div>
+</div>

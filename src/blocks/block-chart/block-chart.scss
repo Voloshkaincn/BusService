@@ -1,0 +1,43 @@
+﻿.block-chart {
+	background-color: #FFF;
+	border-radius: 5px;
+	margin-bottom: 1em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.chart {
+	width: 100% !important;
+	padding: 0 1em !important;
+	max-height: calc(100% - 8em);
+}
+.panel-chart {
+	display: flex;
+	padding: 1em;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer-panel-chart {
+	padding: 0.5em 0.1em 0.1em;
+}
+.full-screen {
+	color: rgba(0, 0, 0, 0.2);
+	font-size: 1.5em;
+	transition: all 0.3s;
+	@extend .iconmoon;
+	&:before {
+		content: '\e915';
+	}
+	&:hover {
+		transform: scale(1.2,1.2);
+	}
+	&__exit {
+		&:before {
+			content: '\e914';
+		}
+		&:hover {
+			transform: scale(0.8,0.8);
+		}
+	}
+	
+}

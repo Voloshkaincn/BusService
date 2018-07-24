@@ -1,0 +1,168 @@
+<div class="content col-12">
+	<form class="panel-period"  ng-controller="periodCtrl">
+	<input class="input-date input-lg" type="text" id='periodFrom' placeholder="От">
+	<input class="input-date input-lg" type="text" id='periodTo' placeholder="До">
+	<button class="priod-btn period-all">Все</button>
+	<div class="priod-btn__group">
+		<button class="priod-btn active">Сегодня</button>
+		<button class="priod-btn">Вчера</button>
+		<button class="priod-btn">7 дней</button>
+		<button class="priod-btn">30дней</button>
+		<button class="priod-btn">90дней</button>				
+	</div>
+</form>
+
+	<div class="block-cashbox__group">
+	<div class="block-cashbox">
+		<span class="block-cashbox__icon icon-ic_cashbox"></span>
+		<div class="block-cashbox__title">Услуги</div>
+		<div class="block-cashbox__value">29 000 грн</div>
+	</div>
+	<div class="block-cashbox">
+		<span class="block-cashbox__icon icon-ic_cashbox"></span>
+		<div class="block-cashbox__title">Запчасти новые</div>
+		<div class="block-cashbox__value">29 000 грн</div>
+	</div>
+	<div class="block-cashbox">
+		<span class="block-cashbox__icon icon-ic_cashbox"></span>
+		<div class="block-cashbox__title">Запчасти б/у</div>
+		<div class="block-cashbox__value">29 000 грн</div>
+	</div>
+	<div class="block-cashbox">
+		<span class="block-cashbox__icon icon-ic_cashbox"></span>
+		<div class="block-cashbox__title">Резерв</div>
+		<div class="block-cashbox__value">29 000 грн</div>
+	</div>
+</div>
+	<div class="block-chart block" ng-controller="chartCtrl">
+	<div class="panel-chart">
+		<div class="btn-group">
+			<button class="btn-little btn-add"></button>
+			<button class="btn-little btn-del"></button>
+		</div>
+		
+		<select class="select-style input-lg" name="" id="">
+			<option value="">Прибыль услуги</option>
+			<option value="">Прибыль услуги</option>
+		</select>
+	</div>
+	
+	<canvas id="chart"  class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" ></canvas>
+	<div class="footer-panel-chart">
+		<button class="full-screen" ng-click='fullScreen($event)'>
+		</button>
+	</div>
+</div>
+	<div class="row">
+		
+
+	<div class="col-md-8 col-12" >
+			<div class="row">
+				<div class="col-sm-6 col-12 pr-sm-0 mb-3">
+	<div class="block-costs">
+		<div class="block-costs__title">Затраты:</div>
+		<div class="row justify-content-between">
+			<div class="block-costs__item">Запчасти новые:</div>
+			<div class="block-costs__value lg-text">29 000 грн</div>
+		</div>
+		<div class="row justify-content-between">
+			<div class="block-costs__item">Запчасти б/у:</div>
+			<div class="block-costs__value lg-text">49 000 грн</div>
+		</div>	
+	</div>	
+</div>
+
+<div class="col-sm-6 col-12 pr-md-0 mb-3">
+	<div class="block-costs">
+		<div class="block-costs__title">Сумма долга:</div>
+		<div class="block-costs__summ positive-color">+49 000 грн</div>
+		<div class="block-costs__summ negative-color">-49 000 грн</div>
+	</div>	
+</div>
+			</div>
+			<div class="row overflow-hidden">
+				<div class="col-12 pr-md-0">
+					<div class="block-header"> 
+		<button>Долги</button>
+		<h5>Непроведенные накладные</h5>		
+	</div>
+<div class="table-invoices">	
+	<table class="table-lg md-text">
+		<tr>
+			<td>Андрей Длиннофамильный</td>
+			<td class="text-center">22.03.2017,22:03</td>
+			<td class="text-nowrap text-right bright-text lg-text">2 229 000 грн</td>
+		</tr>
+		<tr>
+			<td>Андрей Зирков</td>
+			<td class="text-center">22.03.2017,22:03</td>
+			<td class="text-nowrap text-right bright-text lg-text">29 000 грн</td>
+		</tr>
+		<tr>
+			<td>Андрей Зирков</td>
+			<td class="text-center">22.03.2017,22:03</td>
+			<td class="text-nowrap text-right bright-text lg-text">29 000 грн</td>
+		</tr>
+		<tr>
+			<td>Андрей Зирков</td>
+			<td class="text-center">22.03.2017,22:03</td>
+			<td class="text-nowrap text-right bright-text lg-text">29 000 грн</td>
+		</tr>
+		<tr>
+			<td>Андрей Зирков</td>
+			<td class="text-center">22.03.2017,22:03</td>
+			<td class="text-nowrap text-right bright-text lg-text">29 000 грн</td>
+		</tr>
+		<tr>
+			<td>Андрей Зирков</td>
+			<td class="text-center">22.03.2017,22:03</td>
+			<td class="text-nowrap text-right bright-text lg-text">29 000 грн</td>
+		</tr>
+	</table>	
+</div>
+				</div>				
+			</div>
+			
+		</div>
+		<div class="col-md-4 col-12">
+			<div class="block-history">
+	<div class="block-header">
+		<h5>История</h5>
+	</div>
+	<div class="block-history__content">
+		<ul class="history__list">
+			<li class="history__item">
+				<p class="history__date">22.03.2017</p>
+				<p class="history__user">Иван Контюшкин</p>
+				<p class="history__text">Добавление пользователя</p>
+			</li>
+			<li class="history__item">
+				<p class="history__date">22.03.2017</p>
+				<p class="history__user">Иван Контюшкин</p>
+				<p class="history__text">Добавление пользователя</p>
+			</li>
+			<li class="history__item">
+				<p class="history__date">22.03.2017</p>
+				<p class="history__user">Иван Контюшкин</p>
+				<p class="history__text">Добавление пользователя</p>
+			</li>
+			<li class="history__item">
+				<p class="history__date">22.03.2017</p>
+				<p class="history__user">Иван Контюшкин</p>
+				<p class="history__text">Добавление пользователя</p>
+			</li>
+			<li class="history__item">
+				<p class="history__date">22.03.2017</p>
+				<p class="history__user">Иван Контюшкин</p>
+				<p class="history__text">Добавление пользователя</p>
+			</li>
+		</ul>
+		<button class="block-history__btn btn-light">Всё</button>
+	</div>
+	
+
+	
+</div>					
+		</div>
+	</div>
+</div>

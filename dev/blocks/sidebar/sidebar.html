@@ -1,0 +1,88 @@
+<div class="sidebar collapse" id="sidebar" ng-controller="menuCtrl">
+
+	<div class="sidebar-col">
+		<button class="sidebar-control icon-ic_back_circle"></button>
+		<div class="logo">
+			<img src="img/main/logo.png" alt="logo">
+		</div>
+		<div class="elem-currency">
+	<div class="exchange-rate">
+		<p>1$ = 27,5грн</p>
+		<p>1€ = 30,5грн</p>
+	</div>
+	<div class="currency">
+		<button class="currency__btn active">ГРН</button>
+		<button class="currency__btn">€</button>
+		<button class="currency__btn">$</button>
+	</div>
+</div>
+
+
+		<ul class="sidebar-menu nav flex-column">
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/')}" href="#!" ng-click="sidebarHide()">
+					<span class="menu-icon icon-home"></span>
+					<span class="menu-text">Главная</span>				
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link " ng-class=" {active : isActive('/orders')}" href="#!orders" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_orders"></span>
+					<span class="menu-text">Заказы</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link"  ng-class=" {active : isActive('/spares')}" href="#!spares" ng-click="sidebarHide()">
+					<span class="menu-icon icon-settings"></span>
+					<span class="menu-text">Запчасти</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/services')}" href="#!services" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_services"></span>
+					<span class="menu-text">Услуги</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/cashbox')}" href="#!cashbox" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_cashbox"></span>
+					<span class="menu-text">Кассы</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/arrivalSpares')}" href="#!arrivalSpares" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_parts"></span>
+					<span class="menu-text">Приход запчастей</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/clients')}" href="#!clients" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_clients"></span>
+					<span class="menu-text">Клиенты</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/cars')}" href="#!cars" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_cars"></span>
+					<span class="menu-text">Автомобили</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/reports')}" href="#!reports" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_reports"></span>
+					<span class="menu-text">Отчеты</span>
+				</a>
+			</li>
+		</ul>
+		<div class="sidebar-options">
+			<a href="#!settings" class="sidebar-options__item btn-light" ng-click="sidebarHide()">
+				<span class="sidebar-options__icon icon-settings"></span>
+				<span class="sidebar-options__text">Настройки</span>
+			</a>
+			<button class="sidebar-options__item btn-light" ng-click="sidebarHide()">
+				<span class="sidebar-options__icon icon-ic_orders"></span>
+				<span class="sidebar-options__text">Выход</span>
+			</button>
+		</div>
+	</div>
+</div>

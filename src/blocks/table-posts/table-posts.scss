@@ -1,0 +1,33 @@
+.table-posts {
+	background-color: #FFF;
+	border-radius: $block-b-radius;
+	td:not(th) {
+		padding: 0.3em 1.429em;
+	}
+	th {
+		padding: 0.8em 1.429em;
+	}
+	&__panel {
+		display: flex;
+		padding: 0 1em;
+	}
+	&__title {
+		font-size: 1.143em;
+		opacity: 0.6;
+		font-weight: bold;
+	}
+	&__toggle {
+		margin-left: auto;
+		span {
+			display: block;
+			border-top: 0.857em solid #b0b0b0;
+			border-right: 0.714em solid transparent;
+			border-left: 0.714em solid transparent;
+		}
+		&.open {
+			span {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

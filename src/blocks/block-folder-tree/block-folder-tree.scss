@@ -1,0 +1,46 @@
+.folder-tree {
+	list-style: none;
+	padding-left: 3em;
+	line-height: 1.5em;
+}
+.folder {
+	position: relative;
+	cursor: pointer;
+	&:before {
+		@extend .iconmoon;
+		content: "\f114";
+		position: absolute;
+    	left: -1.5em;
+    	font-size: 1.2em;
+    	margin-top: 0.05em;
+    	line-height: inherit;
+	}
+	&:after {
+		content: "";
+		border-left: 0.5em solid #5e6a79;
+	    border-top: 0.36em solid transparent;
+	    border-bottom: 0.36em solid transparent;
+		position: absolute;
+		left: -2.5em;
+		left: -2.7em;
+    	top: 0.4em;
+	}
+	&.open {
+		&:after {
+			transform: rotate(90deg);
+		}
+		.folder__items {
+			display: block;
+		}
+	}
+	&__items {
+		display: none;
+		list-style: none;
+		padding-left: 0.7em;
+		font-weight: bold;
+
+	}
+	&__item {
+
+	}
+}

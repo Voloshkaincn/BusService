@@ -1,0 +1,23 @@
+.modal-spares {
+	&__label {
+		width: 30%;
+	}
+	&__input-lg {
+		width: 70%;
+	}
+	&__input-md {
+		width: 60%;
+	}
+	&__input-sm {
+		width: 25%;
+	}
+	&__input-xs {
+		width: 15%;
+	}
+}
+#spares-currency {
+	position: absolute;
+	left: 58%;
+	margin-top: 1em;
+
+}

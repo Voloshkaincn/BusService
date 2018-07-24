@@ -1,0 +1,40 @@
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+//
+// Grid mixins
+//
+
+@import "bootstrap/mixins/breakpoints";
+@import "bootstrap/mixins/grid-framework";
+@import "bootstrap/mixins/grid";
+
+@import "bootstrap/grid";
+@import "bootstrap/utilities/flex";
+@import "bootstrap/utilities/display";
+@import "bootstrap/utilities/spacing";
+@import "bootstrap/utilities/sizing";
+
+
+@import "bootstrap/mixins/hover";
+@import "bootstrap/mixins/border-radius";
+
+@import 'bootstrap/_nav.scss';
+
+@import "bootstrap/mixins/caret";
+@import "bootstrap/mixins/box-shadow";
+@import "bootstrap/mixins/nav-divider";
+@import "bootstrap/mixins/gradients";
+
+@import 'bootstrap/_dropdown.scss'; 
+
+@import "bootstrap/mixins/text-truncate";
+@import "bootstrap/mixins/text-emphasis";
+@import "bootstrap/mixins/text-hide";
+@import "bootstrap/utilities/text";
+@import "bootstrap/utilities/position";
+
+.f-shrink-0 {
+    flex-shrink: 0;
+}

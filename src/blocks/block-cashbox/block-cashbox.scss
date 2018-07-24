@@ -1,0 +1,47 @@
+.block-cashbox {
+	border-radius: 5px;
+	background-color: #FFF;
+	height: 7.14em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+	width: 24%;
+	position: relative;
+	@media (max-width: $medium){
+		width: 48%;
+		height: 5.5em;
+    }
+	&__group {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: space-between;
+	}
+	&__icon {
+		position: absolute;
+	    top: 5px;
+	    left: 5px;
+	    font-size: 1.5em;
+	    opacity: 0.3;
+	    @media (max-width: $medium){
+			font-size: 1.2em;
+	    }
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 1.14em;
+		color: rgba(0,0,0,0.6);
+		line-height: 1.5em;
+	}
+	&__value {
+		font-weight: 200;
+		font-size: 2em;
+		color: #26517a;
+		@media (max-width: $medium){
+	        font-size: 1.7em;
+	    }
+
+	}
+}

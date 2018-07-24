@@ -1,0 +1,24 @@
+.reports {
+	display: flex;
+	flex-wrap: wrap;
+}
+.report {
+	height: 10.714em;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	&__title {
+		font-weight: bold;
+		opacity: 0.6;
+		font-size: 1.143em;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 0.857em;
+		line-height: 1em;
+	}
+	select {
+		margin-bottom: 0.857em;
+	}
+}

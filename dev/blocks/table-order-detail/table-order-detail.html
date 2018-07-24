@@ -1,0 +1,34 @@
+<div class="table-order-detail table-block">
+	<table>
+		<thead>
+			<tr>
+				<th><input type="checkbox" ng-model="toggleCheck" ng-change="allCheck()"></th>
+				<th>ID</th>
+				<th>Вид</th>
+				<th>Товар</th>
+				<th>Артикул</th>
+				<th>Бренд</th>
+				<th>Кол-во</th>
+				<th>Цена</th>
+				<th>Сумма</th>
+				<th>Касса</th>
+				<th>Пост</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr  class="check-{{order.check}}" ng-repeat="orderDetail in orderDetails">
+				<td><input type="checkbox" ng-model="orderDetail.check"></td>
+				<td>{{ orderDetail.id }}</td>
+				<td>{{ orderDetail.kind }}</td>
+				<td>{{ orderDetail.goods }}</td>
+				<td>{{ orderDetail.article }}</td>
+				<td>{{ orderDetail.brand }}</td>
+				<td>{{ orderDetail.count }}</td>
+				<td class="text-nowrap">{{ orderDetail.price }}</td>
+				<td class="text-nowrap">{{ orderDetail.summ }}</td>
+				<td>{{ orderDetail.cashbox }}</td>
+				<td class="text-nowrap">{{ orderDetail.post }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

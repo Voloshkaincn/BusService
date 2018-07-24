@@ -1,0 +1,20 @@
+.order-result {
+	width: 44%;
+	padding: 0.5em 1.786em;
+	text-align: right;
+}
+.result {
+	&__items {
+		margin-bottom: 0.8em;
+		width: 100%;
+	}
+	&__item {
+		font-weight: bold;
+		font-size: 1.714em;
+		text-align: right;
+		line-height: 1.5em;
+	}
+	button + button {
+		margin-left: 1em;
+	}
+}

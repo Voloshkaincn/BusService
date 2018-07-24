@@ -1,0 +1,19 @@
+<div class="block-chart block" ng-controller="chartCtrl">
+	<div class="panel-chart">
+		<div class="btn-group">
+			<button class="btn-little btn-add"></button>
+			<button class="btn-little btn-del"></button>
+		</div>
+		
+		<select class="select-style input-lg" name="" id="">
+			<option value="">Прибыль услуги</option>
+			<option value="">Прибыль услуги</option>
+		</select>
+	</div>
+	
+	<canvas id="chart"  class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" ></canvas>
+	<div class="footer-panel-chart">
+		<button class="full-screen" ng-click='fullScreen($event)'>
+		</button>
+	</div>
+</div>

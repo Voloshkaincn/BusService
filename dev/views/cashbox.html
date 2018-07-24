@@ -1,0 +1,213 @@
+<div class="content col-12">
+	<form class="panel-period"  ng-controller="periodCtrl">
+	<input class="input-date input-lg" type="text" id='periodFrom' placeholder="От">
+	<input class="input-date input-lg" type="text" id='periodTo' placeholder="До">
+	<button class="priod-btn period-all">Все</button>
+	<div class="priod-btn__group">
+		<button class="priod-btn active">Сегодня</button>
+		<button class="priod-btn">Вчера</button>
+		<button class="priod-btn">7 дней</button>
+		<button class="priod-btn">30дней</button>
+		<button class="priod-btn">90дней</button>				
+	</div>
+</form>
+
+	<div class="block-cashbox__group">
+	<div class="block-cashbox">
+		<span class="block-cashbox__icon icon-ic_cashbox"></span>
+		<div class="block-cashbox__title">Услуги</div>
+		<div class="block-cashbox__value">29 000 грн</div>
+	</div>
+	<div class="block-cashbox">
+		<span class="block-cashbox__icon icon-ic_cashbox"></span>
+		<div class="block-cashbox__title">Запчасти новые</div>
+		<div class="block-cashbox__value">29 000 грн</div>
+	</div>
+	<div class="block-cashbox">
+		<span class="block-cashbox__icon icon-ic_cashbox"></span>
+		<div class="block-cashbox__title">Запчасти б/у</div>
+		<div class="block-cashbox__value">29 000 грн</div>
+	</div>
+	<div class="block-cashbox">
+		<span class="block-cashbox__icon icon-ic_cashbox"></span>
+		<div class="block-cashbox__title">Резерв</div>
+		<div class="block-cashbox__value">29 000 грн</div>
+	</div>
+</div>
+	<div class="table-posts  table-block">
+	<div class="table-posts__panel">
+		<h1 class="table-posts__title">Баланс постов</h1>
+		<button class="table-posts__toggle">
+			<span></span>
+		</button>
+	</div>
+	<table style="display: none;">
+		<thead>
+			<tr>
+				<th>Пост</th>
+				<th>Сумма</th>
+				<th class='btn-column text-center'>Выдать</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="text-nowrap">Пост 1</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-center"><button class="btn">Выдать</button></td>
+			</tr>
+			<tr>
+				<td class="text-nowrap">Пост 2</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-center"><button class="btn">Выдать</button></td>
+			</tr>
+			<tr>
+				<td class="text-nowrap">Пост 3</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-center"><button class="btn">Выдать</button></td>
+			</tr>
+			<tr>
+				<td class="text-nowrap">Пост 4</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-center"><button class="btn">Выдать</button></td>
+			</tr>
+			<tr>
+				<td class="text-nowrap">Пост 5</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-center"><button class="btn">Выдать</button></td>
+			</tr>
+			<tr>
+				<td class="text-nowrap">Пост 6</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-center"><button class="btn">Выдать</button></td>
+			</tr>
+			<tr>
+				<td class="text-nowrap">Пост 7</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-center"><button class="btn">Выдать</button></td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+	<div class="panel-options block">
+	<div class="panel-options__buttons">
+		<div class="btn-group">
+			<button class="btn-little btn-add" ng-click="add()"></button>
+			<button class="btn-little btn-del" ng-click="del()"></button>
+		</div>
+		<div class="btn-group">
+			<button class="btn" ng-click="archive()">Архив</button>
+		</div>
+	</div>
+	<input id="search" class="input-search input-style input-md" type="text" placeholder="Поиск по таблице ...">
+	<label class="input-icon icon-search" for="search"></label>
+</div>
+	<div class="table-cashbox table-block">
+	<table>
+		<thead>
+			<tr>
+				<th><input type="checkbox"></th>
+				<th>ID</th>
+				<th>Тип</th>
+				<th>Клиент</th>
+				<th>Сумма</th>
+				<th>Долг</th>
+				<th>Время</th>
+				<th>Автор</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>22</td>
+				<td>PRO</td>
+				<td>Авранко Андрей Михайлович</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-nowrap warning-color">2 222,22 грн</td>
+				<td>22,03.2017 22:03</td>
+				<td>Андрей Кривошейко</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>22</td>
+				<td>PRO</td>
+				<td>Авранко Андрей Михайлович</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-nowrap warning-color">2 222,22 грн</td>
+				<td>22,03.2017 22:03</td>
+				<td>Андрей Кривошейко</td>
+			</tr>
+			<tr class="accept">
+				<td><input type="checkbox"></td>
+				<td>22</td>
+				<td>PRO</td>
+				<td>Авранко Андрей Михайлович</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-nowrap warning-color"></td>
+				<td>22,03.2017 22:03</td>
+				<td>Андрей Кривошейко</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>22</td>
+				<td>PRO</td>
+				<td>Авранко Андрей Михайлович</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-nowrap warning-color">2 222,22 грн</td>
+				<td>22,03.2017 22:03</td>
+				<td>Андрей Кривошейко</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>22</td>
+				<td>PRO</td>
+				<td>Авранко Андрей Михайлович</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-nowrap warning-color">2 222,22 грн</td>
+				<td>22,03.2017 22:03</td>
+				<td>Андрей Кривошейко</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>22</td>
+				<td>PRO</td>
+				<td>Авранко Андрей Михайлович</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-nowrap warning-color">2 222,22 грн</td>
+				<td>22,03.2017 22:03</td>
+				<td>Андрей Кривошейко</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>22</td>
+				<td>PRO</td>
+				<td>Авранко Андрей Михайлович</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-nowrap warning-color">2 222,22 грн</td>
+				<td>22,03.2017 22:03</td>
+				<td>Андрей Кривошейко</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>22</td>
+				<td>PRO</td>
+				<td>Авранко Андрей Михайлович</td>
+				<td class="text-nowrap">22 222,22 грн</td>
+				<td class="text-nowrap warning-color">2 222,22 грн</td>
+				<td>22,03.2017 22:03</td>
+				<td>Андрей Кривошейко</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	<div class="pagination">
+	<ul class="pagination__items">
+		<li class="pagination__item pagination__prev"><a href="#"></a></li>
+		<li class="pagination__item pagination__number"><a href="#">1</a></li>
+		<li class="pagination__item pagination__number active"><a href="#">2</a></li>
+		<li class="pagination__item pagination__number"><a href="#">3</a></li>
+		<li class="pagination__item pagination__number"><a href="#">4</a></li>
+		<li class="pagination__item pagination__next"><a href="#"></a></li>	
+	</ul>
+</div>
+</div>

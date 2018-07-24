@@ -1,0 +1,55 @@
+.elem-currency {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    @media (max-width: $small){
+        flex-direction: column;
+    }
+}
+.exchange-rate {
+	font-size: 1.143em;
+	font-weight: 200;
+	display: flex;
+    margin-right: 60px;
+    @media (max-width: $medium){
+        margin-right: 5px;
+        flex-direction: column;
+    }
+    // @media (max-width: $xsmall){
+    //     display: none;
+    // }
+    p {
+    	@media (max-width: $medium){
+	        margin:0 5px;
+	    }
+    }
+    p + p {
+    	margin-left: 1em;
+    	@media (max-width: $medium){
+	        margin: 0 5px;
+	    }
+    }
+}
+.currency {
+    font-size: 1.93em;
+    @media (max-width: $small){
+        margin-top: 1em;
+        letter-spacing: -0.36em;   
+    }
+    &__btn {
+        transition: all 0.2s ease;
+        &.active {
+            color: #00bff3;
+            font-weight: bold;
+            &:hover {
+                transform: scale(1.1,1.1);
+                transition: all 0.2s ease;
+            } 
+        }
+        &:hover {
+            transform: scale(1.2,1.2);
+            transition: all 0.2s ease;
+        } 
+    }
+    
+}

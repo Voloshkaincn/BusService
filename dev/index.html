@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="" lang="ru" ng-app="serviceApp">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bus Service</title>
+
+	<meta content="telephone=no" name="format-detection">
+	<!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
+	<meta name="HandheldFriendly" content="true">
+
+	<link href="css/libs.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.min.css" rel="stylesheet" type="text/css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,300,400,500,600,700,800,900&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+	<link rel="shortcut icon" href="/img/main/favicon.png" type="image/png">
+</head>
+
+<body>
+	<div id="max-width-991"></div>
+	<div id="max-width-767"></div>
+	<div class="wrapper">
+		<div class="header">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+		<div class="mobil-menu">
+			<div class="humburger">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</button>
+	<div class="user">
+		<div class="user__photo" style="background-image: url(img/content/user-photo.jpg);"></div>
+		<div class="user__info">
+			<div class="user__name">Андрей Игнатьев</div>
+			<div class="user__status">Admin</div>
+		</div>				
+	</div>
+	<div class="history-navigation">
+		<button><span class="icon-ic_back"></span></button>
+		<button><span class="icon-ic_forward"></span></button>
+	</div>
+	<div class="elem-currency">
+	<div class="exchange-rate">
+		<p>1$ = 27,5грн</p>
+		<p>1€ = 30,5грн</p>
+	</div>
+	<div class="currency">
+		<button class="currency__btn active">ГРН</button>
+		<button class="currency__btn">€</button>
+		<button class="currency__btn">$</button>
+	</div>
+</div>
+
+
+</div>
+		<div class="container-fluid wrapper__container">
+			<div class="row flex-nowrap position-relative">
+				<div class="sidebar collapse" id="sidebar" ng-controller="menuCtrl">
+
+	<div class="sidebar-col">
+		<button class="sidebar-control icon-ic_back_circle"></button>
+		<div class="logo">
+			<img src="img/main/logo.png" alt="logo">
+		</div>
+		<div class="elem-currency">
+	<div class="exchange-rate">
+		<p>1$ = 27,5грн</p>
+		<p>1€ = 30,5грн</p>
+	</div>
+	<div class="currency">
+		<button class="currency__btn active">ГРН</button>
+		<button class="currency__btn">€</button>
+		<button class="currency__btn">$</button>
+	</div>
+</div>
+
+
+		<ul class="sidebar-menu nav flex-column">
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/')}" href="#!" ng-click="sidebarHide()">
+					<span class="menu-icon icon-home"></span>
+					<span class="menu-text">Главная</span>				
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link " ng-class=" {active : isActive('/orders')}" href="#!orders" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_orders"></span>
+					<span class="menu-text">Заказы</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link"  ng-class=" {active : isActive('/spares')}" href="#!spares" ng-click="sidebarHide()">
+					<span class="menu-icon icon-settings"></span>
+					<span class="menu-text">Запчасти</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/services')}" href="#!services" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_services"></span>
+					<span class="menu-text">Услуги</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/cashbox')}" href="#!cashbox" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_cashbox"></span>
+					<span class="menu-text">Кассы</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/arrivalSpares')}" href="#!arrivalSpares" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_parts"></span>
+					<span class="menu-text">Приход запчастей</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/clients')}" href="#!clients" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_clients"></span>
+					<span class="menu-text">Клиенты</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/cars')}" href="#!cars" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_cars"></span>
+					<span class="menu-text">Автомобили</span>
+				</a>
+			</li>
+			<li class="sidebar-menu__item">
+				<a class="sidebar-menu__link" ng-class=" {active : isActive('/reports')}" href="#!reports" ng-click="sidebarHide()">
+					<span class="menu-icon icon-ic_reports"></span>
+					<span class="menu-text">Отчеты</span>
+				</a>
+			</li>
+		</ul>
+		<div class="sidebar-options">
+			<a href="#!settings" class="sidebar-options__item btn-light" ng-click="sidebarHide()">
+				<span class="sidebar-options__icon icon-settings"></span>
+				<span class="sidebar-options__text">Настройки</span>
+			</a>
+			<button class="sidebar-options__item btn-light" ng-click="sidebarHide()">
+				<span class="sidebar-options__icon icon-ic_orders"></span>
+				<span class="sidebar-options__text">Выход</span>
+			</button>
+		</div>
+	</div>
+</div>
+				<div class="main-col">
+					<div class="overlay"></div>
+					<ng-view></ng-view>			
+					<div class="footer">
+	<div class="footer__tabs">
+		<div class="footer__tab active">
+			<div class="tab__close">x</div>
+			<span class="menu-icon icon-home"></span>
+			<span class="menu-text">Главная</span>		
+		</div>
+	</div>
+	<button class="add-footer-tab">
+		<span class="icon-ic_add"></span>
+	</button>
+</div>
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
+			
+
+	<script type="text/javascript" src="js/libs.min.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
+	
+</body>
+</html>
+ 	

@@ -1,0 +1,25 @@
+.order-detail {
+	width: 100%;
+	margin-bottom: 0.7em;
+	&__form {
+		padding: 0.714em;
+	}
+}
+.options-row {
+	margin-bottom: 1.429em;
+}
+#order-client {
+	max-width: 80%;
+	
+}
+#order-number {
+	width: 4.286em;
+}
+#orderDateFrom {
+	width: 7.2em;
+	margin-right: 0;
+}
+#order-mileage {
+	width: 7.143em;
+	margin-right: 0.7em;
+}

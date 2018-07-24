@@ -1,0 +1,17 @@
+<!--This is the tamplate for custom table directive. It gets the name of the scope object through  the attribut "custom-table" and all options through  the attribut "options". Options should be recorded through a comma. Possible options values: checkbox.-->
+<!--Example of use-->
+<!--<table custome-table="spares" options="checkbox"></table>-->
+<thead>
+  <tr>  
+    <th  ng-if="checkbox"><input type="checkbox" ng-model="toggleCheck" ng-change="allCheck()""></th>
+    <th ng-repeat="title in data.titles">{{title}}</th>
+  </tr>
+</thead>
+<tbody>
+  <tr ng-repeat="item in data.data" class="check-{{data.check[$index]}}">
+    <td  ng-if="checkbox"><input type="checkbox" ng-model="data.check[$index]"></td>
+    <td ng-repeat="(key, value) in item" class="{{data.classes[key]}}">
+      {{value}}
+    </td>
+  </tr>
+</tbody>

@@ -1,0 +1,53 @@
+<div id='modal-cashbox' class="modal modal-cashbox">
+	<button class="modal-close">
+		<span class="icon-close"></span>		
+	</button>
+	<h1 class="modal-title">Расходный ордер</h1>
+	<form action="">
+		<div class="form-row">
+			<div class="form-group">
+				<input class="input-style input-sm" type="text" id="cashbox-number">
+			</div>
+			<div class="form-group">
+				<label for="cashbox-date">от</label>
+				<input class="input-style input-sm input-date" id="cashbox-date" type="text">
+				<label class="input-date__icon" for="cashbox-date"></label>
+			</div>
+			<div class="form-group">
+				<label  for="cashbox">Касса</label>
+				<select class="select-style" name="" id="cashbox">
+					<option value="">Услуги</option>
+					<option value="">Товары</option>
+				</select>
+			</div>			
+		</div>
+		<div class="form-row">
+			<label class="modal-cashbox__label" for="cashbox-firm">Фирма</label>
+			<input class="modal-cashbox__input-lg input-style input-sm" id="cashbox-firm" type="text">
+		</div>
+		<div class="form-row">
+			<label class="modal-cashbox__label" for="cashbox-provider">Поставщик</label>
+			<input class="modal-cashbox__input-sm input-style input-sm" id="cashbox-provider" type="text">
+		</div>
+		<div class="form-row">
+			<label class="modal-cashbox__label" for="cashbox-attachment">Приложение</label>
+			<input class="modal-cashbox__input-sm input-style input-sm" id="cashbox-attachment" type="text">
+		</div>
+		<div class="form-row">
+			<label class="modal-cashbox__label" for="cashbox-summ">Сумма</label>
+			<input class="modal-cashbox__input-sm input-style input-sm" id="cashbox-summ" type="text">
+			<select name="" class="select-style input-sm" id="cashbox-currency">
+				<option value="">грн</option>
+				<option value="">$</option>
+				<option value="">€</option>
+			</select>
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group">
+				<button class="btn-bright">Выдать</button>
+				<button class="btn-bright">Отмена</button>
+			</div>
+			<button class="btn-little btn-print"></button>
+		</div>
+	</form>
+</div>

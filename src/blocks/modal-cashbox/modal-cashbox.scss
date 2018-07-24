@@ -1,0 +1,23 @@
+.modal-cashbox {
+	&__label {
+		width: 23%;
+	}
+	&__input-lg {
+		width: 65%;
+	}
+	&__input-md {
+		width: 36%;
+	}
+	&__input-sm {
+		width: 24%;
+	}
+	.btn-print {
+		margin-left: auto;
+	}
+}
+#cashbox-number {
+	width: 5.357em;
+}
+#cashbox-summ {
+	margin-right: 1em;
+}
